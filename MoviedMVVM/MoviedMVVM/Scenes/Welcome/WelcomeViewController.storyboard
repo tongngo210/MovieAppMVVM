@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="obh-4w-DeV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="gkg-pg-y2N">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="obh-4w-DeV" customClass="WelcomeViewController" customModule="MoviedMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oB4-98-tPR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UIu-ea-V1b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Iaf-qy-0Dg">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="utQ-em-XRC">
+                                <rect key="frame" x="129" y="660" width="156" height="26"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3gT-hB-gcA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UIu-ea-V1b" firstAttribute="leading" secondItem="3gT-hB-gcA" secondAttribute="leading" id="1Ia-Tr-ROP"/>
+                            <constraint firstAttribute="bottom" secondItem="UIu-ea-V1b" secondAttribute="bottom" id="30P-MA-D4g"/>
+                            <constraint firstItem="utQ-em-XRC" firstAttribute="centerX" secondItem="oB4-98-tPR" secondAttribute="centerX" id="4FB-Bd-3Of"/>
+                            <constraint firstItem="UIu-ea-V1b" firstAttribute="top" secondItem="oB4-98-tPR" secondAttribute="top" id="AH6-oe-Diw"/>
+                            <constraint firstItem="utQ-em-XRC" firstAttribute="bottom" secondItem="UIu-ea-V1b" secondAttribute="bottom" constant="-210" id="Q1b-Gy-3fi"/>
+                            <constraint firstItem="3gT-hB-gcA" firstAttribute="trailing" secondItem="UIu-ea-V1b" secondAttribute="trailing" id="wH4-nA-O1V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HNj-mf-AVA"/>
+                    <connections>
+                        <outlet property="pageControl" destination="utQ-em-XRC" id="hO7-2x-Lbs"/>
+                        <outlet property="welcomeCollectionView" destination="UIu-ea-V1b" id="NUf-rw-DuW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQz-PG-2up" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="66.964285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

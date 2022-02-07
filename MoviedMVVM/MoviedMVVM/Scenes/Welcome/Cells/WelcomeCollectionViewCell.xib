@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WelcomeCollectionViewCell" id="2ME-Fi-KCX" customClass="WelcomeCollectionViewCell" customModule="MoviedMVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="398"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="298" height="398"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfL-Do-qnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="298" height="398"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="njt-9f-kyf">
+                                <rect key="frame" x="0.0" y="0.0" width="298" height="398"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSE-LQ-8zR">
+                                <rect key="frame" x="72.5" y="244" width="153" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="jQU-aa-Wjp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapButton:" destination="2ME-Fi-KCX" eventType="touchUpInside" id="s2h-w8-4gp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="njt-9f-kyf" secondAttribute="trailing" id="GG4-yF-BY0"/>
+                            <constraint firstItem="wSE-LQ-8zR" firstAttribute="width" secondItem="ZfL-Do-qnJ" secondAttribute="width" multiplier="192/375" id="HiX-EB-mpw"/>
+                            <constraint firstItem="njt-9f-kyf" firstAttribute="top" secondItem="ZfL-Do-qnJ" secondAttribute="top" id="OeD-00-Lak"/>
+                            <constraint firstAttribute="bottom" secondItem="wSE-LQ-8zR" secondAttribute="bottom" constant="100" id="P1c-Dw-xPP"/>
+                            <constraint firstItem="wSE-LQ-8zR" firstAttribute="centerX" secondItem="ZfL-Do-qnJ" secondAttribute="centerX" id="ZMh-27-jHM"/>
+                            <constraint firstAttribute="bottom" secondItem="njt-9f-kyf" secondAttribute="bottom" id="fmh-bF-VzJ"/>
+                            <constraint firstItem="njt-9f-kyf" firstAttribute="leading" secondItem="ZfL-Do-qnJ" secondAttribute="leading" id="hnH-yt-d3I"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="uzR-vR-0RP"/>
+            <constraints>
+                <constraint firstItem="ZfL-Do-qnJ" firstAttribute="top" secondItem="2ME-Fi-KCX" secondAttribute="top" id="Hel-ga-B5n"/>
+                <constraint firstAttribute="trailing" secondItem="ZfL-Do-qnJ" secondAttribute="trailing" id="IwU-5t-YSF"/>
+                <constraint firstItem="ZfL-Do-qnJ" firstAttribute="leading" secondItem="2ME-Fi-KCX" secondAttribute="leading" id="nOt-hm-gcw"/>
+                <constraint firstAttribute="bottom" secondItem="ZfL-Do-qnJ" secondAttribute="bottom" id="vWl-f8-qia"/>
+            </constraints>
+            <size key="customSize" width="298" height="398"/>
+            <connections>
+                <outlet property="nextButton" destination="wSE-LQ-8zR" id="CdO-FR-t4n"/>
+                <outlet property="welcomeImageView" destination="njt-9f-kyf" id="vkR-If-AjS"/>
+            </connections>
+            <point key="canvasLocation" x="448" y="84"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
